@@ -1,0 +1,14 @@
+
+def state_legistrators(str state):
+   # access data base
+    url = urllib2.Request("https://api.fiscalnote.com/legislators?apikey=49BWNS84OZ0Y9CYZW4EJ7A7PVBFCY46N")
+    #print "Before request"
+    response = urllib2.urlopen(url)
+    #print "After urlopen"
+    response = response.read()
+    #print "after read response"
+    legislators = json.loads(response)    
+    for rep in legislators:
+	    if rep['state'] == user_input:
+		    list_of_legistlators.append(rep)
+	    return list_of_legistlators

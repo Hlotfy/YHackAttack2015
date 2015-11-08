@@ -1,0 +1,48 @@
+<head> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+
+<form method='post'>
+	{% csrf_token %}
+
+	<p> Question here 1</p>
+    {{ form.as_p}}
+    
+	<p> Question here 2 </p>
+    {{ form.as_p}}
+
+    <p> Question here 3 </p>
+    {{ form.as_p}}
+
+    <p> Question here 4 </p>
+    {{ form.as_p}}
+
+    <p> Question here 5 </p>
+    {{ form.as_p}}
+
+    <p> Question here 6 </p>
+    {{ form.as_p}}
+
+    <p> Question here 7 </p>
+    {{ form.as_p}}
+
+    <p> Question here 8 </p>
+    {{ form.as_p}}
+
+    <p> Question here 9 </p>
+    {{ form.as_p}}
+
+    <p> Question here 10 </p>
+    {{ form.as_p}}
+
+    <p> Question here 11 </p>
+    {{ form.as_p}}
+
+    <input type='submit' value='submit'>
+
+    {% for object in someresponse  %}
+  	<p>{{ object.answer }}</p>
+	{% endfor %}
+
+</form>

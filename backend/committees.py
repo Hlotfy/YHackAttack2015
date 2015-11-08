@@ -12,6 +12,6 @@ response = response.read()
 committees = json.loads(response)
 print "list of legislators info: "
 for group in committees: 
-	#return committees.keys()
-	print committees.keys()
+
+	print group.keys()
 	

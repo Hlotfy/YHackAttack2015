@@ -10,8 +10,12 @@ response = urllib2.urlopen(url)
 response = response.read()
 
 bills = json.loads(response)
-print "list of bill info: "
+print "Bill info: "
 for bill in bills: 
-	#return bill.keys()
-	print bill.keys()
+	print "title:"
+	print bill['title']
+	subcategory = bill['categories']
+	print subcategory.keys()
+	print "description:"
+	print bill['description']
 	

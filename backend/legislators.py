@@ -12,6 +12,8 @@ response = response.read()
 legislators = json.loads(response)
 print "list of legislators info: "
 for rep in legislators: 
-	#return rep.keys()
-	print rep.keys()
+	print "state: "
+	print rep['state']
+	print "name: "
+	print rep['first_name'], rep['last_name']
 	

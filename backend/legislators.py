@@ -17,3 +17,11 @@ for rep in legislators:
 	print "name: "
 	print rep['first_name'], rep['last_name']
 	
+# get user's input
+user_input = str(input("What state do you live in"))
+list_of_legistrators = []
+for rep in legislators:
+	if rep['state'] == user_input:
+		list_of_legistlators.append(rep)
+	return list_of_legistlators
+		
